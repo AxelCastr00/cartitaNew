@@ -16,6 +16,9 @@ function Step4() {
         <p>Prometo amarte, respetarte y valorarte, hoy y siempre. En este universo PINGÜINERO que vamos construyendo juntos sea sano y lindo.</p>
         <p>Y bueno recorda, que cada paso que demos, en cada desafío que enfrentemos, estaré a tu lado, brindándote seguridad y amor. Porque juntos somos más fuertes, y el amor que compartimos sean tan leal como siempre. Gracias por hacerme una mejor persona y un mejor novio.</p>
         <p>Te amo muchoooooooo! sos mi pololaa mas lindaaa</p>
+        <p>Eres la razón por la cual sigo y esfuerzo para ser mejor cada dia, te quiero. Bañate mas seguido hermosa</p>
+        <p>Toma mucha auitaa</p>
+        <p>https://www.youtube.com/watch?v=e-tEZ2H5tF8</p>
         <button onClick={handleShowSpotify}>Descubrir el regalito extra</button>
         {showSpotify && (
           <iframe
