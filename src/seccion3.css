@@ -1,3 +1,15 @@
+/* Estilos generales */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #FFE6E6;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+
 /* Estilos para la carta */
 .card {
   background-color: #FFFFFF;
@@ -8,6 +20,14 @@
   width: 100%; /* La tarjeta ocupará todo el ancho disponible */
   animation: fadeIn 1.5s ease-in-out;
   box-sizing: border-box; /* Incluir padding y border en el tamaño total */
+  display: flex;
+  flex-direction: column; /* Alinear elementos hijos verticalmente */
+  align-items: center; /* Centrar elementos hijos horizontalmente */
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
 /* Estilos para el texto */
@@ -15,6 +35,7 @@
   font-size: 1rem; /* Tamaño de fuente relativo */
   margin-bottom: 1.25em; /* Espacio entre párrafos */
   color: #333;
+  width: 100%; /* Asegurar que el texto ocupe todo el ancho del contenedor */
 }
 
 /* Estilos para el checkbox */
@@ -24,6 +45,7 @@
   cursor: pointer;
   font-size: 1rem; /* Tamaño de fuente relativo */
   color: #333;
+  width: 100%; /* Asegurar que la etiqueta ocupe todo el ancho del contenedor */
 }
 
 /* Estilos para el botón */
@@ -69,3 +91,4 @@ button:disabled {
     padding: 0.75em 1.25em; /* Espacio dentro del botón */
   }
 }
+
