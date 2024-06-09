@@ -2,7 +2,7 @@
 body {
   font-family: 'Arial', sans-serif;
   background-color: #FFE6E6;
-  padding: 20px;
+  padding: 0; /* Eliminando padding adicional */
   margin: 0;
   display: flex;
   justify-content: center;
@@ -16,7 +16,6 @@ body {
   background-color: #FFFFFF;
   border-radius: 15px;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1), 0 6px 6px rgba(0, 0, 0, 0.1);
-  margin: 1em;
   padding: 2em;
   width: 100%;
   max-width: 500px;
@@ -138,4 +137,5 @@ button.button:disabled {
     font-size: 14px;
   }
 }
+
 
