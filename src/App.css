@@ -1,0 +1,117 @@
+/* styles.css */
+/* General style */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #FFE6E6;
+  padding: 20px;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  box-sizing: border-box; 
+}
+
+.card {
+  background-color: #FFFFFF;
+  border-radius: 15px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+  margin: 1em;
+  padding: 2em;
+  width: 100%;
+  max-width: 500px;
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Style for labels */
+label {
+  display: block;
+  margin-bottom: 10px;
+  color: #333;
+  font-weight: bold;
+}
+
+/* Style for inputs and select */
+input[type="text"], select, input[type="checkbox"] {
+  padding: 10px;
+  border: 1px solid #AD88C6;
+  border-radius: 4px;
+  font-size: 16px;
+  width: 100%; 
+  box-sizing: border-box;
+  margin-bottom: 20px;
+}
+
+/* Specific style for checkbox */
+input[type="checkbox"] {
+  width: auto;
+  margin-right: 10px;
+}
+
+/* Style for buttons */
+button {
+  padding: 10px 20px;
+  background-color: #7469B6;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #AD88C6;
+}
+
+button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+/* Alignment style for checkbox */
+.checkbox-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+.checkbox-group label {
+  display: flex;
+  align-items: center;
+  margin-bottom: 5px;
+  font-weight: normal;
+  color: #555;
+}
+
+/* Additional style for the final step */
+.card.final-step {
+  background-color: #FFE6E6;
+  background-image: url('');
+  background-size: cover;
+  color: #333;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.card.final-step p {
+  background: rgba(255, 255, 255, 0.8);
+  padding: 1em;
+  border-radius: 10px;
+}
+
+/* Responsive adaptation */
+@media (max-width: 600px) {
+  .card {
+    padding: 1.5em;
+  }
+
+  button {
+    width: 100%;
+    font-size: 14px;
+  }
+}

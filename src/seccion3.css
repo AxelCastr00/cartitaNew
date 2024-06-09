@@ -1,0 +1,59 @@
+/* Estilos para la carta */
+.card {
+  background-color: #FFFFFF;
+  border-radius: 15px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  padding: 2em;
+  max-width: 500px;
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+/* Estilos para el texto */
+.card p {
+  font-size: 16px;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* Estilos para el checkbox */
+.card label {
+  display: block;
+  margin-bottom: 10px;
+  cursor: pointer;
+  font-size: 16px;
+  color: #333;
+}
+
+/* Estilos para el botón */
+button {
+  padding: 10px 20px;
+  background-color: #7469B6;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  width: 100%; /* El botón ocupa todo el ancho */
+}
+
+button:hover {
+  background-color: #AD88C6;
+  transform: translateY(-2px);
+}
+
+button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+/* Adaptación responsiva */
+@media (max-width: 600px) {
+  .card {
+    padding: 1.5em;
+  }
+
+  button {
+    font-size: 14px;
+  }
+}

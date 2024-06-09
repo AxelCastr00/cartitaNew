@@ -1,0 +1,103 @@
+/* Estilos mejorados y profesionalizados */
+@import url(./seccion2.css);
+@import url(./seccion4.css);
+@import url(./seccion3.css);
+/* General style */
+/* General style */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #FFE6E6;
+  padding: 20px;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+
+/* Estilos para la carta */
+.card {
+  background-color: #FFFFFF;
+  border-radius: 15px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1), 0 6px 6px rgba(0, 0, 0, 0.1);
+  margin: 1em;
+  padding: 2em;
+  width: 100%;
+  max-width: 500px;
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Estilos para labels */
+.input-label {
+  display: block;
+  margin-bottom: 10px;
+  color: #333;
+  font-weight: bold;
+}
+
+/* Estilos para inputs */
+.input-field {
+  padding: 10px;
+  border: 1px solid #AD88C6;
+  border-radius: 4px;
+  font-size: 16px;
+  width: 100%;
+  box-sizing: border-box;
+  margin-bottom: 20px;
+  transition: border-color 0.3s ease;
+}
+
+.input-field:focus {
+  border-color: #7469B6;
+  outline: none;
+}
+
+/* Estilos para botones */
+.button {
+  padding: 10px 20px;
+  background-color: #7469B6;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.button:hover {
+  background-color: #AD88C6;
+  transform: translateY(-2px);
+}
+
+.button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+/* Adaptación responsiva */
+@media (max-width: 600px) {
+  .card {
+    padding: 1.5em;
+  }
+
+  .button {
+    width: 100%;
+    font-size: 14px;
+  }
+}
+/* Estilo para la alerta */
+.alert {
+  background-color: #FFD6D6;
+  border: 1px solid #FF5252;
+  color: #FF5252;
+  padding: 20px 25px;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  font-size: 18px;
+}
