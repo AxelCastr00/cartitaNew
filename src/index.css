@@ -1,8 +1,6 @@
-/* Estilos mejorados y profesionalizados */
 @import url(./seccion2.css);
 @import url(./seccion4.css);
 @import url(./seccion3.css);
-/* General style */
 /* General style */
 body {
   font-family: 'Arial', sans-serif;
@@ -82,15 +80,39 @@ body {
 
 /* Adaptación responsiva */
 @media (max-width: 600px) {
+  body {
+    padding: 10px;
+  }
+
   .card {
     padding: 1.5em;
+    margin: 0.5em;
+    width: 90%;
+  }
+
+  .input-label {
+    margin-bottom: 8px;
+    font-size: 14px;
+  }
+
+  .input-field {
+    padding: 8px;
+    font-size: 14px;
+    margin-bottom: 15px;
   }
 
   .button {
     width: 100%;
+    padding: 12px;
     font-size: 14px;
   }
+
+  .alert {
+    font-size: 16px;
+    padding: 15px 20px;
+  }
 }
+
 /* Estilo para la alerta */
 .alert {
   background-color: #FFD6D6;
