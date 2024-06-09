@@ -1,6 +1,4 @@
-/* styles.css */
-
-/* General style */
+/* Estilos generales */
 body {
   font-family: 'Arial', sans-serif;
   background-color: #FFE6E6;
@@ -13,51 +11,92 @@ body {
   box-sizing: border-box;
 }
 
-/* Card styles */
+/* Estilos para la carta */
 .card {
   background-color: #FFFFFF;
   border-radius: 15px;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1), 0 6px 6px rgba(0, 0, 0, 0.1);
   margin: 1em;
   padding: 2em;
   width: 100%;
   max-width: 500px;
   animation: fadeIn 1.5s ease-in-out;
+  box-sizing: border-box; /* Asegurando que padding y border estén incluidos en el tamaño total */
 }
 
-/* Keyframes for fadeIn animation */
 @keyframes fadeIn {
   from { opacity: 0; transform: translateY(20px); }
   to { opacity: 1; transform: translateY(0); }
 }
 
-/* Label style */
-label {
-  display: block;
-  margin-bottom: 10px;
+/* Estilos para el título de la carta */
+.card-title {
+  font-size: 1.5em;
+  margin-bottom: 20px;
   color: #333;
   font-weight: bold;
 }
 
-/* Input and select styles */
-input[type="text"], select, input[type="checkbox"] {
-  padding: 10px;
-  border: 1px solid #AD88C6;
-  border-radius: 4px;
-  font-size: 16px;
-  width: 100%;
-  box-sizing: border-box;
+/* Estilos para los grupos de checkboxes */
+.checkbox-group {
   margin-bottom: 20px;
 }
 
-/* Checkbox style */
-input[type="checkbox"] {
-  width: auto;
-  margin-right: 10px;
+.checkbox-group input[type="checkbox"] {
+  display: none;
 }
 
-/* Button styles */
-button {
+.checkbox-group label.checkbox-label {
+  position: relative;
+  display: block;
+  padding-left: 30px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  font-size: 1em;
+  color: #333;
+  transition: color 0.3s ease;
+}
+
+.checkbox-group label.checkbox-label:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 20px;
+  height: 20px;
+  border: 2px solid #AD88C6;
+  border-radius: 4px;
+  background-color: #FFF;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.checkbox-group input[type="checkbox"]:checked + label.checkbox-label:after {
+  content: "";
+  position: absolute;
+  left: 5px;
+  top: 1px;
+  width: 8px;
+  height: 16px;
+  border: solid #7469B6;
+  border-width: 0 3px 3px 0;
+  transform: rotate(45deg);
+}
+
+.checkbox-group input[type="checkbox"]:checked + label.checkbox-label:before {
+  background-color: #E1AFD1;
+  border-color: #7469B6;
+}
+
+.checkbox-group label.checkbox-label:hover {
+  color: #7469B6;
+}
+
+.checkbox-group label.checkbox-label:hover:before {
+  border-color: #7469B6;
+}
+
+/* Estilos para botones */
+button.button {
   padding: 10px 20px;
   background-color: #7469B6;
   color: white;
@@ -65,57 +104,38 @@ button {
   border-radius: 4px;
   cursor: pointer;
   font-size: 16px;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  width: 100%; /* El botón ocupa todo el ancho disponible */
 }
 
-button:hover {
+button.button:hover {
   background-color: #AD88C6;
+  transform: translateY(-2px);
 }
 
-button:disabled {
+button.button:disabled {
   background-color: #ccc;
   cursor: not-allowed;
 }
 
-/* Checkbox group alignment */
-.checkbox-group {
-  display: flex;
-  flex-direction: column;
-  margin-bottom: 20px;
-}
-
-.checkbox-group label {
-  display: flex;
-  align-items: center;
-  margin-bottom: 5px;
-  font-weight: normal;
-  color: #555;
-}
-
-/* Additional styles for final step */
-.card.final-step {
-  background-color: #FFE6E6;
-  background-image: url('');
-  background-size: cover;
-  color: #333;
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
-}
-
-.card.final-step p {
-  background: rgba(255, 255, 255, 0.8);
-  padding: 1em;
-  border-radius: 10px;
-}
-
-/* Responsive adaptation */
+/* Adaptación responsiva */
 @media (max-width: 600px) {
   .card {
-    padding: 1.5em; /* Ajuste del padding para dispositivos móviles */
-    margin: 0.5em; /* Ajuste del margen para dispositivos móviles */
+    padding: 1.5em;
+    margin: 0.5em; /* Se reduce el margen para dispositivos móviles */
   }
 
-  button {
-    font-size: 14px; /* Reducción del tamaño de fuente para dispositivos móviles */
+  .card-title {
+    font-size: 1.3em; /* Se reduce el tamaño del título para dispositivos móviles */
+  }
+
+  .checkbox-group label.checkbox-label,
+  .card-title {
+    margin-bottom: 15px; /* Se ajusta el espaciado entre elementos */
+  }
+
+  button.button {
+    font-size: 14px;
   }
 }
 
