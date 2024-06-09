@@ -1,6 +1,7 @@
 @import url(./seccion2.css);
 @import url(./seccion4.css);
 @import url(./seccion3.css);
+
 /* General style */
 body {
   font-family: 'Arial', sans-serif;
@@ -12,6 +13,16 @@ body {
   align-items: center;
   min-height: 100vh;
   box-sizing: border-box;
+}
+
+/* Contenedor principal centrado */
+.main-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px; /* Ajusta según tus necesidades */
+  margin: auto;
 }
 
 /* Estilos para la carta */
@@ -84,6 +95,11 @@ body {
     padding: 10px;
   }
 
+  .main-container {
+    flex-direction: column; /* Para asegurar que los elementos se apilen verticalmente en pantallas pequeñas */
+    align-items: center;
+  }
+
   .card {
     padding: 1.5em;
     margin: 0.5em;
@@ -123,3 +139,4 @@ body {
   margin-bottom: 20px;
   font-size: 18px;
 }
+
